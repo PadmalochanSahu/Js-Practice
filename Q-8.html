@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess No.</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Guess The Number</h1>
+        <button onclick="guess()">Click to see Luck</button>
+    </div>
+    <script>
+        let n1 = 1;
+        let n2 = 10;
+        let ca = n1 + (n2-n1)*Math.random();
+        ca = Math.round(ca);
+        console.log(ca);
+      function guess(){
+        let a = prompt("Guess the number from 1-10");
+        a = Number.parseInt(a);
+        if(a!=ca){
+          alert("Try Again")
+        }else{
+        alert("Good Guess")
+        }
+      }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Leap Year</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Leap Year</h1>
+        <form>
+            <label for="year">Enter Year :</label><br>
+            <input type="number" id="text" name="year" step="4" placeholder="Enter the Year" >
+            <button id="btn">Click here to Check</button>
+        </form>
+        <p id="lp"></p>
+    </div>
+ <script>
+
+    let year = document.getElementById('btn');
+    year.addEventListener('click', function check(){
+        event.preventDefault();
+        let text = document.getElementById('text').value;
+        if(text%4 == 0 ){
+            lp = document.getElementById('lp');
+            lp.innerHTML = (`${text} is a leap Year`)
+        }else{
+            lp.innerHTML = (`${text} is not a leap Year`)
+        }
+
+    })
+
+
+ </script>
+</body>
+</html>

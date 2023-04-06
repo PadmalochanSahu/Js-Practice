@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius to Fahrenheit</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Celcius to Fahrenheit</h1>
+        <form>
+            <lable for="cel">Enter Temp In Cencius: </lable><br>
+            <input type="number" name="cel" id="cel" placeholder="Enter Temp In Cencius">
+            <Button id="btn-1">Change</Button>
+            <p id="resInF" ></p>
+            
+            <lable for="fah">Enter Temp In Fahrenheit: </lable><br>
+            <input type="number" name="fah" id="fah" placeholder="Enter Temp In Fahrenheit">
+            <Button id="btn-2">Change</Button>
+            <p id="resInC" ></p>
+        </form>
+    </div>
+   <script>
+        let btn1 = document.getElementById('btn-1');
+        btn1.addEventListener('click', function Check(){
+        event.preventDefault();
+        let cel = document.getElementById('cel').value
+        let cToF = cel* 9 / 5 + 32;
+        document.getElementById('resInF').innerHTML = (`The Result: ${cToF} <sup>o</sup>F`);
+
+    });
+    let btn2 = document.getElementById('btn-2');
+        btn2.addEventListener('click', function Check2(){
+        event.preventDefault();
+        let fah = document.getElementById('fah').value
+        let fToC = (fah - 32) * 5 / 9;
+        document.getElementById('resInC').innerHTML = (`The Result: ${fToC} <sup>o</sup>C`);
+
+    });
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time And Date</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Date & Time</h1>
+        <div id="dt">
+          <h3 id="day">Today is : </h3>
+          <h3 id="time">Current Time is : </h3>
+        </div>
+    </div>
+    <script>
+        let current = new Date();
+        let d = current.getDay();
+        let darr = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        day = document.getElementById('day')
+        day.innerHTML = ('Today is : '+ darr[d]);
+        let h = current.getHours();
+        let m = current.getMinutes();
+        let s = current.getSeconds();
+        time = document.getElementById('time');
+        time.innerHTML = ('Current Time is:  '+ h +': '+ m +': '+ s );
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To get the website URL</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To get the website URL</h1>
+        <p id="url"></p>
+        <button id="btn">Get URL</button>
+    </div>
+
+  <script>
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', function get(){
+      document.getElementById('url').innerHTML = (document.URL);
+    });
+  </script>
+</body>
+</html>

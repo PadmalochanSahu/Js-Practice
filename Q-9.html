@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No. of days for Cristmas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Check No. of days for Cristmas</h1>
+        
+            <button id="btn">Check</button>
+        
+    </div>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', function check(){
+        event.preventDefault();
+        let now = new Date;
+        let cris = new Date(now.getFullYear(),11,25);
+        console.log(cris);
+        
+        });
+    </script>
+</body>
+</html>

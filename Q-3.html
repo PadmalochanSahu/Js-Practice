@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current date</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Current Date
+        </h1>
+      <div class="dates" style="padding:10px">
+        <div id="date"></div>
+        <div id="date2"></div>
+        <div id="date3"></div>
+      </div>
+        
+    </div>
+    <script>
+        let current = new Date();
+        console.log(current);
+        let month = current.getMonth();
+        let year = current.getFullYear();
+        let dat = current.getDate();
+        date = document.getElementById('date');
+        date2 = document.getElementById('date2');
+        date3 = document.getElementById('date3');
+        date.innerHTML = (month + ' - ' + dat + ' - ' + year);
+        date2.innerHTML = (month + ' / ' + dat + ' / ' + year);
+        date3.innerHTML = (dat + ' - ' + month + ' - ' + year);
+         
+         
+        
+
+    </script>
+</body>
+</html>

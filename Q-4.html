@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Area of a Triangle</h1>
+        <div id="area">Area:</div>
+    </div>
+    <script>
+        let s1 = 5;
+        let s2 = 6;
+        let s3 = 7;
+        let sp = (s1 + s2 + s3 )/2 ;
+        console.log(sp)
+        let area = Math.sqrt(sp*((sp-s1)*(sp-s2)*(sp-s3)));
+        area1 = document.getElementById('area');
+        area1.innerHTML = ('Area: '+ area);
+    </script>
+</body>
+</html>
