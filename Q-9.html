@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No. of days for Cristmas</title>
+    <title>No. of days for Christmas</title>
 </head>
 <body>
     <div class="container">
-        <h1>Check No. of days for Cristmas</h1>
-        
-            <button id="btn">Check</button>
+        <h1>Check No. of days for Christmas</h1>
+        <p id="show"></p>
+        <button id="btn">Check</button>
         
     </div>
     <script>
@@ -19,7 +19,10 @@
         event.preventDefault();
         let now = new Date;
         let cris = new Date(now.getFullYear(),11,25);
-        console.log(cris);
+        let oneDay = 24*60*60*1000;
+        let diff = Math.ceil((cris.getTime()-now.getTime())/oneDay);
+        document.getElementById('show').innerHTML = (`${diff} : days left for next Christmas`)
+        
         
         });
     </script>

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotate the string</title>
+    <title>To get the extension of a filename</title>
 </head>
 <body>
     <div class="container">
-        <h1>Rotating the String</h1>
+        <h1>To get the extension of a filename</h1>
     </div>
     <script>
-        let str = "hello";
-        let str2 = str.slice(str.length-1);
-
+        let file = prompt("Enter a file name with Extension");
+        let extension = file.split('.').pop();
+        console.log(extension)
+        
+        
+        
     </script>
 </body>
 </html>
