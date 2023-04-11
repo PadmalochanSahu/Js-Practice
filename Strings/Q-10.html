@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converts upper case letters to lower case, and lower case letters to upper case</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Converts upper case letters to lower case, and lower case letters to upper case</h1>
+        <lable for="name">Enter a sentence:</lable><br />
+        <input type="text" name="name" id="name" placeholder="Enter a sentence" />
+        <button id="btn">Convert</button>
+        <p id="con"></p>
+    </div>
+    <script>
+
+        let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        let check = (word) => {
+            let split = word.split('');
+            let newArr = split.map((element) => {
+                let c = arr.includes(element);
+                if (c == true) {
+                    result = element.toUpperCase();
+                } else {
+                    result = element.toLowerCase();
+                }
+                return result;
+            });
+            let newWord = newArr.join('')
+            console.log(newWord);
+        }
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            name = document.getElementById('name').value;
+            check(name);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .count{
+        height: 22px;
+        margin: 29px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        <button class="count" data-operator="add">+</button>
+        <h1 id="num">1</h1>
+        <button class="count" data-operator="sub">-</button>
+    </div>
+    <script>
+   
+        let list = document.getElementsByClassName('count');
+        let num = document.getElementById('num');
+        let a = 1;
+        let countOps = Array.from(list);
+        let dom = countOps.forEach( (element) => {
+            element.addEventListener('click' , function(){
+             let event = (element.dataset.operator);
+             console.log('t1',event);
+             if(event == 'add' &&  a >= 0 && a < 10){
+                a++;
+                num.innerHTML = a
+             }else if(event == 'sub' && a > 0){
+                a--;
+                num.innerHTML = a
+             }
+            });
+        });
+    </script>
+</body>
+</html>

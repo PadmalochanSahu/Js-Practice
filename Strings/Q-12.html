@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uncamelize a string</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Uncamelize a string</h1>
+      <lable for="name">Enter a sentence:</lable><br />
+      <input type="text" name="name" id="name" placeholder="Enter a sentence" />
+      <button id="btn">Convert</button>
+      <p id="con"></p>
+    </div>
+    <script>
+      let letter = [
+        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O", "P","Q","R","S","T","U","V","W","X","Y","Z",
+      ];
+      let check = (word) => {
+        let split = word.split("");
+        let finalArr = split.map((element) => {
+          let n = letter.includes(element);
+          if (n == true) {
+            return element.toLowerCase();
+          } else {
+            return element;
+          }
+        });
+
+        let finalWord = finalArr.join("");
+        console.log(finalWord);
+      };
+
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+      name = document.getElementById("name").value;
+      check(name);
+      });
+    </script>
+  </body>
+</html>

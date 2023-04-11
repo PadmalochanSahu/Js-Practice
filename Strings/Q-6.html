@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Convert a string in abbreviated form string</h1>
+      <lable for="mail">Enter Your Email Id:</lable><br />
+      <input type="email" name="mail" id="mail" placeholder="Enter your Email Id"/>
+      <button id="btn">Convert</button>
+      <p id="con"></p>
+    </div>
+    <script>
+      hide = function (email) {
+        let splt = email.split("@");
+        let splt1 = splt[0];
+        let first = splt1.length / 2;
+        let fp = splt1.substring(0, splt1.length - first);
+        return fp + "..." + "@" + splt[1];
+      };
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function check() {
+        let mail = document.getElementById("mail").value;
+        document.getElementById("con").innerHTML = hide(mail);
+      });
+    </script>
+  </body>
+</html>

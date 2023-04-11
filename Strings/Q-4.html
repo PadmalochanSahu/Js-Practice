@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract a specified number of characters from a string</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Extract a specified number of characters from a string</h1>
+        <label for="text">Enter a Text: </label>
+        <input type="text" name="text" id="inpt" placeholder="Write down"><br><br>
+
+        <label for="num">Enter How Many Times: </label>
+        <input type="number" name="num" id="inpt2"><br>
+        <button id="btn">Check</button>
+    </div>
+    <script>
+        function ext(str,n){
+            if(str.constructor == String && n <= str.length-1 && n != 0 ){
+          return str.slice(0,n); 
+            }else{
+                console.log("Try Again");
+            }
+        }
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', function check(){
+            let inpt = document.getElementById('inpt').value;
+            let inpt2 = document.getElementById('inpt2').value;
+            console.log(ext(inpt,inpt2))
+        });
+    </script>
+</body>
+</html>
